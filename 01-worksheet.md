@@ -4,17 +4,12 @@
 
 ## 🏛️ 1. Bối cảnh thực tế: Vin Smart Future (Vingroup)
 
-**Vingroup** — Tập đoàn tư nhân lớn nhất Việt Nam — vừa sáp nhập toàn bộ các phòng ban công nghệ thuộc các công ty thành viên thành một đơn vị công nghệ thống nhất mang tên **Vin Smart Future**. 
-
-Nhiệm vụ của **Vin Smart Future** là xây dựng các giải pháp AI, số hóa, và tự động hóa cốt lõi để nâng cao hiệu suất vận hành và trải nghiệm khách hàng xuyên suốt các công ty thành viên:
-* 🚗 **VinFast:** Hệ thống xe điện thông minh (EV), trợ lý AI ảo trong xe, dự đoán bảo trì pin, và quản lý chuỗi cung ứng sản xuất.
-* 🚕 **Xanh SM (GSM):** Vận hành đội xe taxi/xe máy điện thông minh, điều vận thông minh (Smart Dispatching), tối ưu hóa lộ trình di chuyển.
-* 🏢 **Vinhomes:** Quản lý đô thị thông minh (Smart Cities), trợ lý cư dân thông minh, tối ưu hóa mức tiêu thụ năng lượng.
-* 🏥 **Vinmec:** Y tế thông minh, chẩn đoán hình ảnh bằng AI, tối ưu hóa quản lý hồ sơ bệnh án.
-* 🎢 **Vinpearl / VinWonders:** Trải nghiệm du lịch số hóa, quản lý phòng và luồng khách thông minh tại các khu vui chơi.
-
-Trong buổi Lab hôm nay, nhóm của bạn sẽ đóng vai trò là **AI Product Engineer** tại **Vin Smart Future**, tiến hành tìm kiếm, scoping, phân tích độ khả thi, thiết lập ranh giới vận hành, và xây dựng một **bản mẫu kỹ thuật (prompt prototype)** cho một bài toán cụ thể thuộc một trong những mảng kinh doanh trên.
-
+STTCông ty thành viênLĩnh vựcBài toán thực tếTác động kinh doanh (Impact)
+1VinFastÔ tô / Sản xuấtDự báo nhu cầu phụ tùng thay thế và linh kiện bảo dưỡng tại các xưởng dịch vụ.Giảm chi phí tồn kho, tối ưu hóa thời gian chờ sửa chữa của khách hàng.
+2VinmecY tế / Chăm sóc sức khỏeTối ưu hóa lịch hẹn khám và điều phối nhân sự y tế theo khung giờ cao điểm.Giảm thời gian chờ của bệnh nhân, nâng cao công suất phục vụ của bác sĩ.
+3VinpearlDu lịch / Nghỉ dưỡngTự động hóa điều chỉnh giá phòng khách sạn và dịch vụ (Dynamic Pricing) theo thời gian thực.Tối ưu hóa doanh thu (RevPAR) dựa trên cung - cầu và hành vi thị trường.
+4VinhomesBất động sản / Vận hànhQuản lý và tối ưu hóa tiêu thụ năng lượng thông minh tại các khu đô thị lớn (Smart City).Giảm chi phí vận hành hạ tầng, đáp ứng tiêu chí phát triển bền vững (ESG).
+5Vincom RetailBán lẻ / Trung tâm thương mạiPhân tích hành vi và luồng di chuyển của khách hàng tại các TTTM qua thị giác máy tính.
 ---
 
 ## 📊 2. Cơ cấu tính điểm bài lab
@@ -61,14 +56,17 @@ Hãy sử dụng **4 Lenses** dưới đây để quét qua hoạt động vận
 > *"Tôi là AI Engineer tại Vin Smart Future (Vingroup). Tôi đang tìm kiếm các pain point vận hành cụ thể có thể tối ưu bằng AI cho mảng [Chọn một: VinFast / Xanh SM / Vinhomes / Vinmec]. Hãy gợi ý cho tôi 5 quy trình nghiệp vụ thủ công, tốn nhiều thời gian và gây rò rỉ hiệu suất kèm con số thống kê ước tính về tổn thất."*
 
 ### 📝 List bài toán của tôi:
+## Bảng quét cơ hội (SCAN)
+
 | # | Subsidiary (VinFast/Xanh SM...) | Lens | Mô tả ngắn bài toán |
 |---|----------------------------------|------|---------------------|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
+| 1 | VinFast | Ô tô / Sản xuất | Dự báo nhu cầu phụ tùng thay thế và linh kiện bảo dưỡng tại các xưởng dịch vụ để tối ưu tồn kho và giảm thời gian chờ của xe. |
+| 2 | Vinmec | Y tế / Chăm sóc sức khỏe | Tối ưu hóa lịch hẹn khám và điều phối nhân sự y tế theo thời gian thực để giảm thời gian chờ đợi của bệnh nhân. |
+| 3 | Vinpearl | Du lịch / Nghỉ dưỡng | Tự động hóa định giá phòng khách sạn (Dynamic Pricing) theo cung - cầu thị trường và thời gian thực để tối đa hóa doanh thu (RevPAR). |
+| 4 | Vinhomes | Bất động sản / Vận hành | Quản lý và tối ưu hóa tiêu thụ năng lượng thông minh (Smart City) cho hệ thống chiếu sáng và hạ tầng khu đô thị. |
+| 5 | Vincom Retail | Bán lẻ / TTTM | Phân tích hành vi và luồng di chuyển của khách hàng bằng Computer Vision để tối ưu hóa quy hoạch mặt bằng và giá thuê gian hàng. |
 
+---
 ---
 
 # 🃏 Phase 2 — QUICK-ASSESS (Cá nhân, 30 min)
@@ -77,24 +75,72 @@ Chọn **top 3 bài toán** từ danh sách trên và hoàn thiện **3 Quick Pr
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ QUICK PROBLEM CARD #___                                     │
+│ QUICK PROBLEM CARD #1                                       │
 │                                                             │
-│ Bài toán (1 câu): ________________________________________  │
-│ Công ty thành viên: [ ] VinFast  [ ] Xanh SM  [ ] Vinhomes  │
+│ Bài toán (1 câu): Dự báo nhu cầu phụ tùng thay thế và linh  │
+│ kiện bảo dưỡng tại xưởng dịch vụ VinFast để tối ưu tồn kho. │
+│ Công ty thành viên: [x] VinFast  [ ] Xanh SM  [ ] Vinhomes  │
 │                     [ ] Vinmec   [ ] Khác (Ghi rõ)________  │
 │                                                             │
-│ Ai đang đau (Actor)? ______________________________________ │
+│ Ai đang đau (Actor)? Quản lý kho, Chuỗi cung ứng, Thợ kỹ thuật │
 │                                                             │
 │ Workflow thủ công hiện tại (3-5 bước):                      │
-│   1. ___ ──> 2. ___ ──> 3. ___ ──> 4. ___                   │
+│   1. Khách mang xe đến xưởng ──> 2. Thợ lập danh sách phụ tùng ──> 3. Thủ kho check phần mềm thủ công ──> 4. Thiếu hàng phải đặt tổng kho  │
 │                                                             │
-│ Bước nào tốn thời gian/lỗi nhất? ___ (⏱ ___ phút/lượt)      │
-│ AI có thể nhảy vào hỗ trợ ở bước nào? _____________________ │
+│ Bước nào tốn thời gian/lỗi nhất? Bước 3 & 4 (⏱ 120-240 phút/lượt) │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Dự báo nhu cầu tự động│
+│ và tạo đề xuất đặt hàng trước dựa trên dữ liệu lịch sử và odo.│
 │                                                             │
-│ Đo thành công bằng gì (Metric có số)? ______________________ │
-│   VD: "Giảm thời gian soạn phản hồi từ 10 min ──> under 2 min"│
+│ Đo thành công bằng gì (Metric có số)?                       │
+│   VD: "Giảm tỷ lệ thiếu hụt phụ tùng từ 15% ──> under 5%"   │
 │                                                             │
-│ Quick Architecture: [ ] No AI  [ ] Rule  [ ] LLM  [ ] Agent │
+│ Quick Architecture: [ ] No AI  [x] Rule  [x] LLM  [ ] Agent │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ QUICK PROBLEM CARD #2                                       │
+│                                                             │
+│ Bài toán (1 câu): Tối ưu hóa lịch hẹn khám và điều phối nhân│
+│ sự y tế theo thời gian thực để giảm thời gian chờ tại Vinmec│
+│ Công ty thành viên: [ ] VinFast  [ ] Xanh SM  [ ] Vinhomes  │
+│                     [x] Vinmec   [ ] Khác (Ghi rõ)________  │
+│                                                             │
+│ Ai đang đau (Actor)? Lễ tân, Bác sĩ, Bệnh nhân             │
+│                                                             │
+│ Workflow thủ công hiện tại (3-5 bước):                      │
+│   1. Bệnh nhân đăng ký lịch ──> 2. Lễ tân xếp slot thủ công ──> 3. Bệnh nhân đến viện chờ khám ──> 4. Bác sĩ khám thực tế (thời gian lệch nhiều) │
+│                                                             │
+│ Bước nào tốn thời gian/lỗi nhất? Bước 2 & 3 (⏱ 30-60 phút/lượt) │
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Dự báo thời gian khám │
+│ thực tế theo triệu chứng và tự động tối ưu hóa lịch hẹn.    │
+│                                                             │
+│ Đo thành công bằng gì (Metric có số)?                       │
+│   VD: "Giảm thời gian chờ đợi trung bình từ 45 min ──> 15 min"│
+│                                                             │
+│ Quick Architecture: [ ] No AI  [ ] Rule  [x] LLM  [x] Agent │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│ QUICK PROBLEM CARD #3                                       │
+│                                                             │
+│ Bài toán (1 câu): Tự động hóa định giá phòng khách sạn      │
+│ (Dynamic Pricing) theo thời gian thực để tối ưu doanh thu.  │
+│ Công ty thành viên: [ ] VinFast  [ ] Xanh SM  [ ] Vinhomes  │
+│                     [ ] Vinmec   [x] Khác (Vinpearl)        │
+│                                                             │
+│ Ai đang đau (Actor)? Giám đốc doanh thu (Revenue Manager)   │
+│                                                             │
+│ Workflow thủ công hiện tại (3-5 bước):                      │
+│   1. Tổng hợp công suất phòng ──> 2. Tra cứu giá đối thủ trên OTA ──> 3. Trình sếp duyệt giá ──> 4. Cập nhật thủ công lên PMS │
+│                                                             │
+│ Bước nào tốn thời gian/lỗi nhất? Bước 2 & 3 (⏱ 180 phút/lượt)│
+│ AI có thể nhảy vào hỗ trợ ở bước nào? Quét dữ liệu thời gian│
+│ thực, phân tích cung-cầu và tự động đề xuất/cập nhật giá.   │
+│                                                             │
+│ Đo thành công bằng gì (Metric có số)?                       │
+│   VD: "Tăng doanh thu trung bình RevPAR từ baseline ──> +10%"│
+│                                                             │
+│ Quick Architecture: [ ] No AI  [ ] Rule  [x] LLM  [x] Agent │
 └─────────────────────────────────────────────────────────────┘
 ```
 
